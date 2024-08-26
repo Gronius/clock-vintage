@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(205, 219, 181);
+}
+.container {
+  display: grid;
+  place-items: center;
+}
+.box {
+  min-width: 700px;
+  max-width: 100%;
+  min-height: 630px;
+  position: fixed;
+  background-image: url(./image/rabbit.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 28px;
+  top: 17px;
+  z-index: 1;
+}
+
+.clock {
+  min-width: 700px;
+  min-height: 630px;
+  border: 1px solid #333;
+  position: fixed;
+  align-items: center;
+  margin: 0px auto;
+  background-image: url(./image/clock3.png);
+  background-size: cover;
+  background-position: center center;
+  top: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+
+.hand {
+  width: 15%;
+  margin-left: 35%;
+  height: 6px;
+  background-color: rgb(51, 51, 51);
+  background-color: #ffffff;
+  position: absolute;
+  top: 25%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  z-index: 3;
+  height: 3%;
+  background-image: url(./image/arrow-fig.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position-y: -0px;
+  background-position-x: 100%;
+  top: 25.2%;
+  width: 19%;
+  margin-left: 31.2%;
+}
+
+.minute-hand {
+  z-index: 2;
+  height: 5%;
+  background-image: url(./image/arrow-big.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position-y: 25%;
+  background-position-x: 0px;
+  top: 24.4%;
+  margin-left: 35.2%;
+  width: 15%;
+}
+
+.second-hand {
+  z-index: 4;
+  width: 14.5%;
+  background-color: red;
+  height: 2px;
+  top: 26.8%;
+  margin-left: 36%;
+}
+
+.center-dot {
+  position: absolute;
+  margin-left: 50.4%;
+  top: 27%;
+  transform: translate(-50%, -50%);
+  height: 1.9%;
+  width: 1.7%;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 10;
+}
